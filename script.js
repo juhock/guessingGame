@@ -33,6 +33,7 @@ document.querySelector(".check").addEventListener("click", function () {
     } else {
       document.querySelector(".message").textContent = "Game Over";
       document.querySelector(".score").textContent = 0;
+      document.querySelector("body").style.backgroundColor = "#AA0000";
     }
 
     //Guess too low
@@ -44,6 +45,8 @@ document.querySelector(".check").addEventListener("click", function () {
     } else {
       document.querySelector(".message").textContent = "Game Over";
       document.querySelector(".score").textContent = 0;
+      document.querySelector("body").style.backgroundColor = "#AA0000";
+      document.querySelector(".number").textContent = secretNumber;
     }
   }
 });
