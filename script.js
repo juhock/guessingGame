@@ -13,16 +13,17 @@ document.querySelector(".check").addEventListener("click", function () {
     document.querySelector(".message").textContent =
       "⛔️ Please enter a number.";
 
-    //Correct guess
+    //Correct guess & highscore
   } else if (guess === secretNumber) {
     document.querySelector(".message").textContent = "🎉 Correct!";
     document.querySelector(".number").textContent = secretNumber;
-
-    highScore++;
-
     document.querySelector("body").style.backgroundColor = "#60b347";
     document.querySelector(".number").style.width = "30rem";
-    document.querySelector(".highscore").textContent = highScore;
+
+    if (score > highScore) {
+      highscore = score;
+      document.querySelector(".highscore").textContent = highScore;
+    }
 
     //Guess too high
   } else if (guess > secretNumber) {
